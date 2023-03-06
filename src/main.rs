@@ -1,4 +1,8 @@
-use std::{env, io::{self, Read, Write, BufReader}, process::exit};
+use std::{
+    env,
+    io::{self, BufReader, Read, Write},
+    process::exit,
+};
 
 use anyhow::Result;
 
@@ -15,6 +19,6 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn run_plugin<R:Read>(_reader: BufReader<R>) -> Result<Vec<u8>> {
+fn run_plugin<R: Read>(_reader: BufReader<R>) -> Result<Vec<u8>> {
     Ok(b"what it is?".to_vec())
 }
